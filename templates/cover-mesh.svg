@@ -1,0 +1,16 @@
+<svg class="mesh" viewBox="0 0 850 1100" preserveAspectRatio="xMidYMid slice">
+ <defs><radialGradient id="g" cx="80%" cy="14%" r="60%">
+   <stop offset="0%" stop-color="#E4C888" stop-opacity=".5"/>
+   <stop offset="100%" stop-color="#E4C888" stop-opacity="0"/></radialGradient></defs>
+ <g stroke="#C9A15A" stroke-width="1" opacity=".5">
+  <line x1="620" y1="90" x2="770" y2="180"/><line x1="770" y1="180" x2="700" y2="320"/>
+  <line x1="700" y1="320" x2="560" y2="270"/><line x1="560" y1="270" x2="620" y2="90"/>
+  <line x1="700" y1="320" x2="800" y2="430"/><line x1="560" y1="270" x2="470" y2="410"/>
+  <line x1="470" y1="410" x2="700" y2="320"/><line x1="620" y1="90" x2="470" y2="410"/>
+ </g>
+ <g fill="#E4C888">
+  <circle cx="620" cy="90" r="3.2"/><circle cx="770" cy="180" r="4"/><circle cx="700" cy="320" r="3"/>
+  <circle cx="560" cy="270" r="2.6"/><circle cx="800" cy="430" r="2.4"/><circle cx="470" cy="410" r="3.4"/>
+ </g>
+ <circle cx="700" cy="150" r="260" fill="url(#g)"/>
+</svg>

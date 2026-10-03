@@ -1,0 +1,101 @@
+:root{
+  --midnight:#0A1A24; --teal:#0E2E38; --ink:#1E2C34; --body:#38474E;
+  --ivory:#FBF8F2; --paper:#FFFFFF; --mute:#7A888E;
+  --gold:#C9A15A; --gold-lt:#E4C888; --hair:rgba(201,161,90,.30); --hair2:#ECE3D2;
+  --crit:#B23A48; --high:#C0812C; --med:#2F6E8F; --low:#8A97A0; --good:#3E8E6E;
+}
+*{margin:0;padding:0;box-sizing:border-box;-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+@page{ size:8.5in 11in; margin:14mm 15mm 15mm; }
+@page :first{ margin:0; }
+html,body{ font-family:'Inter',sans-serif; color:var(--body); font-size:10.5pt; line-height:1.55; }
+
+/* ---------------- COVER ---------------- */
+.cover{ position:relative; width:8.5in; height:11in; overflow:hidden; page-break-after:always;
+  background:
+    radial-gradient(120% 80% at 78% 12%, rgba(201,161,90,.16), transparent 46%),
+    radial-gradient(90% 70% at 12% 96%, rgba(14,46,56,.9), transparent 55%),
+    linear-gradient(155deg,#0B1F2A 0%,#0A1A24 42%,#0C2731 100%);
+  color:#EFE9DC; }
+.cover .mesh{ position:absolute; inset:0; opacity:.5; }
+.cover .frame{ position:absolute; inset:.42in; border:1px solid rgba(201,161,90,.34); }
+.cover .frame:after{ content:""; position:absolute; inset:.07in; border:1px solid rgba(201,161,90,.14); }
+.cover-inner{ position:absolute; inset:0; padding:1.05in .95in; display:flex; flex-direction:column; }
+.seal{ position:absolute; top:1.02in; right:.95in; text-align:right;
+  font-size:8.5pt; letter-spacing:.24em; text-transform:uppercase; color:rgba(228,200,136,.7); }
+.kicker{ font-size:10pt; letter-spacing:.40em; text-transform:uppercase; color:var(--gold-lt); font-weight:500; }
+.kicker .dot{ color:rgba(228,200,136,.5); margin:0 .5em; }
+.cover-mid{ margin-top:auto; }
+.cover h1{ font-family:'Fraunces',serif; font-weight:600; color:#F4EFE4;
+  font-size:60pt; line-height:.94; letter-spacing:-.5pt; }
+.cover h1 .thin{ display:block; font-weight:500; font-style:italic; color:var(--gold-lt);
+  font-family:'Cormorant',serif; font-size:27pt; letter-spacing:.3pt; margin-top:.12in; }
+.cover .rule{ width:1.15in; height:2px; margin:.32in 0 .24in;
+  background:linear-gradient(90deg,var(--gold-lt),rgba(228,200,136,0)); }
+.cover .project{ font-family:'Cormorant',serif; font-style:italic; font-size:19pt; color:#DAD2C2; }
+.cover-foot{ margin-top:.7in; display:flex; gap:.85in; }
+.cover-foot .lbl{ font-size:8pt; letter-spacing:.26em; text-transform:uppercase; color:var(--gold); margin-bottom:.06in; font-weight:600; }
+.cover-foot .val{ font-size:11pt; color:#E9E2D4; }
+
+/* ---------------- CONTENT ---------------- */
+.doc{ background:var(--ivory); }
+p{ margin:.055in 0 .10in; }
+strong{ color:var(--ink); font-weight:600; }
+em{ color:var(--teal); font-style:italic; }
+a{ color:var(--med); text-decoration:none; }
+code{ background:#F1EADB; color:#5C4A28; padding:1px 5px; border-radius:3px;
+  font-family:ui-monospace,Consolas,monospace; font-size:8.6pt; }
+hr{ border:none; border-top:1px solid var(--hair); margin:.24in 0; }
+
+h1{ font-family:'Fraunces',serif; font-size:22pt; color:var(--ink); margin:.1in 0; }
+h2{ font-family:'Fraunces',serif; font-weight:600; font-size:16.5pt; color:var(--ink);
+  letter-spacing:-.2pt; margin:.34in 0 .14in; padding-bottom:.07in;
+  border-bottom:1.5px solid var(--hair); page-break-after:avoid; }
+h2:first-of-type{ margin-top:.05in; }
+h3{ font-family:'Fraunces',serif; font-weight:600; font-size:12.5pt; color:var(--teal);
+  margin:.24in 0 .08in; page-break-after:avoid; }
+h3.sev{ text-transform:uppercase; letter-spacing:.10em; font-size:11pt; font-family:'Inter',sans-serif;
+  font-weight:700; padding-left:.22in; position:relative; margin-top:.3in; }
+h3.sev:before{ content:""; position:absolute; left:0; top:.02in; bottom:.02in; width:.10in; border-radius:2px; }
+h3.crit{ color:var(--crit); } h3.crit:before{ background:var(--crit); }
+h3.high{ color:var(--high); } h3.high:before{ background:var(--high); }
+h3.med{ color:var(--med); } h3.med:before{ background:var(--med); }
+h3.low{ color:var(--low); } h3.low:before{ background:var(--low); }
+
+/* finding labels (Where / Why / The fix) */
+.fl{ display:inline-block; font-size:7.4pt; font-weight:700; letter-spacing:.12em;
+  padding:1.5px 7px; border-radius:3px; margin-right:.09in; vertical-align:1.5px; }
+.flw{ background:#E7EEF2; color:#2F6E8F; }
+.fly{ background:#F6E9D9; color:#9C6A1E; }
+.flf{ background:#E4EFE7; color:#2E7355; }
+
+ul,ol{ margin:.08in 0 .14in .05in; }
+ul{ list-style:none; }
+ul li{ position:relative; padding-left:.28in; margin-bottom:.085in; line-height:1.5; }
+ul li:before{ content:""; position:absolute; left:.05in; top:.085in; width:.075in; height:.075in;
+  background:linear-gradient(135deg,var(--gold-lt),var(--gold)); border-radius:50%; }
+ol li{ margin-left:.2in; padding-left:.06in; margin-bottom:.085in; line-height:1.5; }
+li strong{ color:var(--ink); }
+
+/* tables */
+table{ border-collapse:collapse; width:100%; margin:.14in 0 .2in; font-size:8.8pt;
+  page-break-inside:avoid; }
+thead th{ background:var(--midnight); color:#EFE4CC; font-family:'Inter',sans-serif; font-weight:600;
+  font-size:7.8pt; letter-spacing:.06em; text-transform:uppercase; text-align:left; padding:7px 9px;
+  border-right:1px solid rgba(255,255,255,.06); }
+tbody td{ padding:6px 9px; border-bottom:1px solid var(--hair2); vertical-align:top; color:var(--body); }
+tbody tr:nth-child(even) td{ background:#F5EEDF; }
+tbody tr:last-child td{ border-bottom:1px solid var(--hair); }
+td strong{ color:var(--ink); }
+
+blockquote{ margin:.14in 0; padding:.2in .3in; background:linear-gradient(135deg,#0E2E38,#0A1A24);
+  color:#EBE4D6; border-radius:3px; font-family:'Cormorant',serif; font-style:italic; font-size:13pt; }
+
+/* severity pills in the scorecard + good lines */
+td.s-Critical,td.s-High,td.s-Medium,td.s-Low,td.s-Good{ font-weight:700; font-size:8pt; letter-spacing:.05em; text-transform:uppercase; white-space:nowrap; }
+td.s-Critical{ color:var(--crit);} td.s-High{ color:var(--high);} td.s-Medium{ color:var(--med);} td.s-Low{ color:var(--low);} td.s-Good{ color:var(--good);}
+.fl.flq{ background:#EDE7F6; color:#5B3E96; }
+
+/* long addresses and evidence strings must wrap, never run off the page */
+p,li,td{ overflow-wrap:anywhere; }
+img{ max-width:100%; height:auto; border:1px solid var(--hair2); border-radius:3px; margin:.08in 0; }
+h3.sev + p{ margin-top:.12in; }

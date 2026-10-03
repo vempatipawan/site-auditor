@@ -1,0 +1,13 @@
+{
+  "name": "site-auditor",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Outside-in website audit engine. Scripts measure, the model judges.",
+  "type": "commonjs",
+  "scripts": { "audit": "node audit.js" },
+  "dependencies": {
+    "axe-core": "^4.10.0",
+    "marked": "^18.0.10",
+    "playwright": "^1.62.1"
+  }
+}
